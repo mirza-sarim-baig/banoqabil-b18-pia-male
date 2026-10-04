@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(13, 13, 41);
+    color: rgb(213, 219, 253);
+}
+/* 
+* universal selector
+h1{} tag selector 
+.title class selector 
+#heading id selector  */
+
+
+
+.box{
+    height: 100px;
+    width: 100px;
+    border: 1px solid white;
+    /* Space inside the container  */
+    /* padding: 20px; all sides */ 
+    /* padding: 10px 5px 15px 20px; top right bottom left*/
+    padding: 20px 10px; /* topbottom leftright */
+    /* Space outside the container  */
+    /* margin-bottom: 10px; */
+    margin: 10px;
+    border-radius: 10px;
+    display: none;
+    /* visibility: hidden;*/
+}
+
+
+/* REM */
+/* display: inline/ block
+min/max height 
+overflow
+visibility  */
