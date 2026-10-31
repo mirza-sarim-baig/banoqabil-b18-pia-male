@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Conditional Statements</h1>
+    <script>
+      // keyword, condition, block of code/statement
+      // if(){}
+
+      //   let num = 11;
+
+      //   if (num == 10) {
+      //     console.log("Condition is true");
+      //   } else {
+      //     console.log("Condition is false");
+      //   }
+
+      //   FALSY VALUES
+      // 0
+      // undefined
+      // null
+      // ""
+      // NaN
+
+      //   let user = api ("https://findUser")
+
+      //   let value = "laksdflasdkfj";
+
+      //   if (value) {
+      //     console.log("Condition is true");
+      //   } else {
+      //     console.log("Condition is false");
+      //   }
+
+      // SIGNUP SCENERIO
+      // 1: Data Collection
+      // 2: Structure Data
+      // 3: Check if user already exist or not
+      // 4: Data comparision, verify user details
+
+      //   STEP 1:
+      let userName = "sarim";
+      let userEmail = "sarim1@gmail.com";
+      let userPass = "sarim123";
+
+      // STEP 2:
+      let userObj = {
+        name: userName,
+        email: userEmail,
+        pass: userPass,
+      };
+      //   console.log(userObj);
+
+      //STEP 3:
+      //   localStorage.setItem("user", JSON.stringify(userObj));
+      let userData = localStorage.getItem("user");
+      if (userData) {
+        userData = JSON.parse(userData);
+      } else {
+        userData = {
+          name: "dummy name",
+          email: "dummy email",
+          pass: "dummy pass",
+        };
+      }
+      console.log(userData);
+
+      //   STEP 4:
+      if (userData.email == userEmail) {
+        console.log("Successfully login");
+      } else {
+        console.log("Incorrect details");
+      }
+    </script>
+  </body>
+</html>
