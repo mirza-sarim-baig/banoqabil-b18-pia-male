@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #20233a;
+  background: #f3f5fa;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+  background:
+    radial-gradient(ellipse at 12% 12%, rgb(174 184 255 / 28%), transparent 32%),
+    radial-gradient(ellipse at 90% 92%, rgb(210 196 255 / 32%), transparent 34%),
+    #f3f5fa;
+}
+
+a {
+  color: inherit;
+}
+
+.auth-layout {
+  display: grid;
+  grid-template-columns: 0.88fr 1.12fr;
+  width: min(100%, 1020px);
+  min-height: 650px;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 80%);
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 28px 80px rgb(34 37 74 / 14%);
+}
+
+.brand-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 42px;
+  color: #fff;
+  background:
+    radial-gradient(ellipse at 88% 16%, rgb(135 119 255 / 45%), transparent 34%),
+    radial-gradient(ellipse at 10% 100%, rgb(44 174 199 / 25%), transparent 36%),
+    linear-gradient(145deg, #222344, #34315f 58%, #292b53);
+}
+
+.brand-panel::after {
+  position: absolute;
+  right: -112px;
+  bottom: 76px;
+  width: 310px;
+  height: 310px;
+  border: 1px solid rgb(255 255 255 / 14%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 30px rgb(255 255 255 / 3%), 0 0 0 62px rgb(255 255 255 / 3%);
+  content: "";
+}
+
+.brand {
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  width: fit-content;
+  font-family: "Manrope", sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid rgb(255 255 255 / 30%);
+  border-radius: 12px;
+  background: rgb(255 255 255 / 12%);
+  font-size: 18px;
+}
+
+.brand-copy {
+  z-index: 1;
+  max-width: 365px;
+  margin: auto 0;
+  padding: 56px 0;
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  color: #a7a5d9;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.brand-copy h1 {
+  margin: 0 0 18px;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(36px, 4vw, 48px);
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 1.13;
+}
+
+.brand-copy > p:last-child {
+  max-width: 330px;
+  margin: 0;
+  color: #c9c9de;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.brand-footnote {
+  z-index: 1;
+  margin: 0;
+  color: #b6b5d0;
+  font-size: 12px;
+}
+
+.form-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 70px clamp(36px, 7vw, 82px) 28px;
+}
+
+.form-content {
+  width: 100%;
+  max-width: 380px;
+  margin: auto;
+}
+
+.form-eyebrow {
+  margin-bottom: 12px;
+  color: #7772c7;
+}
+
+.form-content h2 {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(26px, 3vw, 32px);
+  font-weight: 700;
+  letter-spacing: -1.1px;
+  line-height: 1.25;
+}
+
+.form-intro {
+  margin: 10px 0 30px;
+  color: #7b7d8d;
+  font-size: 14px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-form > label,
+.label-row label {
+  margin-bottom: 8px;
+  color: #35374c;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.auth-form input[type="email"],
+.auth-form input[type="password"],
+.auth-form input[type="text"] {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid #e3e5ee;
+  border-radius: 9px;
+  outline: none;
+  background: #fff;
+  color: #25273a;
+  font: inherit;
+  font-size: 14px;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.auth-form input::placeholder {
+  color: #a5a7b5;
+}
+
+.auth-form input[type="email"]:focus,
+.auth-form input[type="password"]:focus,
+.auth-form input[type="text"]:focus {
+  border-color: #7772c7;
+  box-shadow: 0 0 0 3px rgb(119 114 199 / 14%);
+}
+
+.check-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 18px 0 22px;
+  color: #686a7c;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.check-row input {
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  accent-color: #6964b6;
+}
+
+.auth-form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 49px;
+  border: 0;
+  border-radius: 9px;
+  background: #625eaa;
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.auth-form button:hover {
+  transform: translateY(-1px);
+  background: #514d96;
+}
+
+.auth-form button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #aaa6ec;
+  outline-offset: 3px;
+}
+
+.switch-prompt {
+  margin: 25px 0 0;
+  color: #77798a;
+  font-size: 13px;
+  text-align: center;
+}
+
+.switch-prompt a {
+  margin-left: 3px;
+  color: #59549f;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.switch-prompt a:hover {
+  text-decoration: underline;
+}
+
+.legal-note {
+  margin: 36px 0 0;
+  color: #a0a1ae;
+  font-size: 11px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  body {
+    padding: 20px;
+  }
+
+  .auth-layout {
+    grid-template-columns: 1fr;
+    width: min(100%, 520px);
+    min-height: 0;
+  }
+
+  .brand-panel {
+    min-height: 205px;
+    padding: 24px 30px;
+  }
+
+  .brand-copy {
+    margin: 28px 0 0;
+    padding: 0 0 6px;
+  }
+
+  .brand-copy h1 {
+    max-width: 360px;
+    margin-bottom: 9px;
+    font-size: 30px;
+    letter-spacing: -1.2px;
+  }
+
+  .brand-copy > p:last-child,
+  .brand-footnote {
+    display: none;
+  }
+
+  .brand-panel::after {
+    right: -150px;
+    bottom: -180px;
+  }
+
+  .form-panel {
+    min-height: 430px;
+    padding: 40px 30px 22px;
+  }
+}
+
+@media (max-width: 420px) {
+  body {
+    padding: 12px;
+  }
+
+  .auth-layout {
+    border-radius: 18px;
+  }
+
+  .brand-panel {
+    min-height: 180px;
+    padding: 20px 22px;
+  }
+
+  .form-panel {
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+}

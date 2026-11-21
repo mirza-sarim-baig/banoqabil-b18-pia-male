@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Log in to your account."
+    />
+    <title>Log in | Aster</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="auth-layout">
+      <section class="brand-panel" aria-label="About Aster">
+        <a class="brand" href="index.html" aria-label="Aster home">
+          <span class="brand-mark" aria-hidden="true">A</span>
+          <span>aster</span>
+        </a>
+        <div class="brand-copy">
+          <p class="eyebrow">YOUR SPACE, YOUR PACE</p>
+          <h1>Make room for what matters.</h1>
+          <p>
+            Pick up right where you left off. Your next great idea is just
+            around the corner.
+          </p>
+        </div>
+        <p class="brand-footnote">A little more focus. A lot more possibility.</p>
+      </section>
+
+      <section class="form-panel" aria-labelledby="form-title">
+        <div class="form-content">
+          <p class="eyebrow form-eyebrow">WELCOME BACK</p>
+          <h2 id="form-title">Log in to your account</h2>
+          <p class="form-intro">Enter your details to continue.</p>
+
+          <form class="auth-form" method="post">
+            <label for="email">Email address</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required
+            />
+
+            <div class="label-row">
+              <label for="password">Password</label>
+            </div>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+              required
+            />
+
+            <label class="check-row" for="remember">
+              <input id="remember" name="remember" type="checkbox" />
+              <span>Remember me</span>
+            </label>
+
+            <button type="submit">Log in <span aria-hidden="true">→</span></button>
+          </form>
+
+          <p class="switch-prompt">
+            Don’t have an account?
+            <a href="signup.html">Create one</a>
+          </p>
+        </div>
+        <p class="legal-note">By continuing, you agree to our terms and privacy policy.</p>
+      </section>
+    </main>
+  </body>
+</html>

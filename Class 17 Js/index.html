@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Js</h1>
+    <button onclick="print()">Click Me</button>
+    <script>
+      let usersArr = ["sarim", "ali", "ahmed", "hassan", "bilal"];
+      // console.log(usersArr[3]);
+      usersArr.push("hamza");
+      usersArr.push("danish");
+      usersArr.pop();
+      usersArr.unshift("rashid");
+      usersArr.shift();
+
+      // let newUser = prompt("Enter your name");
+      // usersArr.push(newUser);
+      console.log(usersArr);
+
+      let newArr = usersArr.slice(0, 5);
+      console.log(newArr);
+
+      usersArr.splice(1, 3, "new user 1", "new user 2");
+      console.log(usersArr);
+
+      const print = () => {
+        console.log("Hello World");
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Create your Aster account." />
+    <title>Create an account | Aster</title>
+    <link rel="stylesheet" href="signup.css" />
+  </head>
+  <body>
+    <main class="auth-layout">
+      <section class="brand-panel" aria-label="About Aster">
+        <a class="brand" href="index.html" aria-label="Aster home">
+          <span class="brand-mark" aria-hidden="true">A</span>
+          <span>aster</span>
+        </a>
+        <div class="brand-copy">
+          <p class="eyebrow">A FRESH START</p>
+          <h1>Good things begin with you.</h1>
+          <p>
+            Create your free account and make a little space for your next big
+            thing.
+          </p>
+        </div>
+        <p class="brand-footnote">Simple tools for a more intentional day.</p>
+      </section>
+
+      <section class="form-panel" aria-labelledby="form-title">
+        <div class="form-content">
+          <p class="eyebrow form-eyebrow">GET STARTED</p>
+          <h2 id="form-title">Create your account</h2>
+          <p class="form-intro">A few details and you’re ready to go.</p>
+
+          <form class="auth-form">
+            <label for="name">Your name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="e.g. Alex Morgan"
+              autocomplete="name"
+              required
+            />
+
+            <label for="email">Email address</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required
+            />
+
+            <label for="password">Password</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="At least 8 characters"
+              autocomplete="new-password"
+              minlength="8"
+              required
+            />
+
+            <label class="check-row" for="terms">
+              <input id="terms" name="terms" type="checkbox" required />
+              <span>I agree to the terms and privacy policy.</span>
+            </label>
+
+            <button onclick="signupFunc()">
+              Create account <span aria-hidden="true">→</span>
+            </button>
+          </form>
+
+          <p class="switch-prompt">
+            Already have an account?
+            <a href="index.html">Log in</a>
+          </p>
+        </div>
+        <p class="legal-note">
+          Your details stay yours. We’ll never share them.
+        </p>
+      </section>
+    </main>
+    <script src="signup.js"></script>
+  </body>
+</html>
